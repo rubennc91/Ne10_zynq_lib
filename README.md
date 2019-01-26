@@ -74,12 +74,9 @@ The sample program has some definitions to test all possibilities that the libra
 This define is used to select the number of points for the FFT function.
 
 The following defines are used to select between different FFT configurations. 
-
-	* ```C2C:``` is used to select between differents input types, it is possible real (0) or complex (1). The output is always complex. 
-	
-	* ```NEON```: You can select between using the NEON module (1) or not using it (0).
-	
-	* ```FFT```: If you need to perform the inverse FFT (Complex inputs, and real outputs), you can modify it with this define. 
+* ```C2C:``` is used to select between differents input types, it is possible real (0) or complex (1). The output is always complex. 
+* ```NEON```: You can select between using the NEON module (1) or not using it (0).
+* ```FFT```: If you need to perform the inverse FFT (Complex inputs, and real outputs), you can modify it with this define. 
 	
 Obiously if you select ```C2C=1``` the inputs are complex and the output complex too, therefore the iFFT is implemented, but the input is complex and the output too. 
 ```
