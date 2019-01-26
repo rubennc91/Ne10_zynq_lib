@@ -20,9 +20,9 @@ If you wish install Vivado Design Suite, you can download from [here](https://ww
 1. Download GNU Embedded Toolchain from [here](https://developer.arm.com/open-source/gnu-toolchain/gnu-rm/downloads) and unzip in ```/opt/``` and change the name by ```gcc-arm-none-eabi```. You have to sure that inside of this folder are the folder ```bin```, ```lib```, etc.
 2. A cmake file needs to be changed slightly. You can install ```cmake``` if you didn't do it yet with [this](https://cmake.org/install/).
 
-⋅⋅1.You need to locate the cmake installation folder, generally is located in ```/usr/share/cmake```. So, when you locate it, go inside of the cmake folder, open the directory ```Modules/Platform``` and in this folder find the file ```Linux-GNU.cmake``` and change the line: ```set(CMAKE_SHARED_LIBRARY_LINK_${lang}_FLAGS "-rdynamic")``` by this one: ``` set(CMAKE_SHARED_LIBRARY_LINK_${lang}_FLAGS)# "-rdynamic")```
+  1.You need to locate the cmake installation folder, generally is located in ```/usr/share/cmake```. So, when you locate it, go inside of the cmake folder, open the directory ```Modules/Platform``` and in this folder find the file ```Linux-GNU.cmake``` and change the line: ```set(CMAKE_SHARED_LIBRARY_LINK_${lang}_FLAGS "-rdynamic")``` by this one: ``` set(CMAKE_SHARED_LIBRARY_LINK_${lang}_FLAGS)# "-rdynamic")```
 
-⋅⋅The ```-rdynamic``` flag allows to the system make dynamic memory reservations, but in our case it does not usefull, because the libraries are intended to be used in standalone, where dynamic reservations have no relevance. This step can be reversed when the library is compiled.
+   The ```-rdynamic``` flag allows to the system make dynamic memory reservations, but in our case it does not usefull, because the libraries are intended to be used in standalone, where dynamic reservations have no relevance. This step can be reversed when the library is compiled.
 
 3. Clone this github to your CentOS directory.
 ```
