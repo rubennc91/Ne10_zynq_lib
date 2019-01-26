@@ -20,4 +20,6 @@ If you wish install Vivado Design Suite, you can download from [here](https://ww
 ```
 git clone URL
 ```
-2. Download GNU Embedded Toolchain and unzip in ```/opt/``` and change the name by ```gcc-arm-none-eabi```. You have to sure that inside of this folder are the folder ```bin```, ```lib```, etc.
+2. Download GNU Embedded Toolchain from [here](https://developer.arm.com/open-source/gnu-toolchain/gnu-rm/downloads) and unzip in ```/opt/``` and change the name by ```gcc-arm-none-eabi```. You have to sure that inside of this folder are the folder ```bin```, ```lib```, etc.
+3. A cmake file needs to be changed slightly. You can install ```cmake``` if you didn't do it yet with [this](https://cmake.org/install/).
+3.1.
