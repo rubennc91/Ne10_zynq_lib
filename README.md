@@ -1,4 +1,4 @@
-# Ne10_zynq_libs
+# Ne10_zynq_lib
 It's a copy/fork of the [Ne10 project](https://github.com/projectNe10/Ne10). 
 
 This is the Ne10 libraries to use it with Xilinx Zynq in baremetal. 
