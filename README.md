@@ -85,8 +85,8 @@ Obiously if you select ```C2C=1``` the inputs are complex and the output complex
 #define FFT	0	// FFT = 0; iFFT = 1;
 ```
 The final definition is as follows:
-	- ```SHOW_RESULTS``` it is used to display the input and output of the FFT test running. 
-	- ```TEST_SAMPLES``` it is used to select the number of repetitions that the FFT algorithm must execute to obtain the time. 
+*```SHOW_RESULTS``` it is used to display the input and output of the FFT test running. 
+*```TEST_SAMPLES``` it is used to select the number of repetitions that the FFT algorithm must execute to obtain the time. 
 ```
 #define SHOW_RESULTS 	0
 #define TEST_SAMPLES	1000
