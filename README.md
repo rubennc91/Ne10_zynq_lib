@@ -36,6 +36,8 @@ mkdir build && cd build
 cmake -DCMAKE_TOOLCHAIN_FILE=../GNUlinux_config.cmake ..
 make
 ```
+Note that the files of the test folder don't compile, but the library work correctly in Zynq.
+
 ## Add the libraries to Xilinx SDK project
 Once the libraries have been compiled, it is possible to include them in the desired project. In the case of using Xilinx SDK, it is necessary to follow the following steps:
 1. Add the library to the gcc linker:
