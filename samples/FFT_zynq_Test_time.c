@@ -50,7 +50,7 @@
 #include "xparameters.h"
 // NEON libraries
 #include "Ne10.h"
-#include "ne10_alloc_standalone.h"
+
 // Timer libraries
 #include "xtime_l.h"
 
