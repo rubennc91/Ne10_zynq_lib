@@ -139,11 +139,11 @@ int main(void)
 
 	// Initialization of pointers src and dst
 #if FFT == 1
-	psrc_ddr = (ne10_fft_cpx_float32_t *) (cfg->buffer + (sizeof (ne10_fft_cpx_float32_t) * (fftSize*8)));
-	pdst_ddr = (ne10_float32_t *) ((ne10_float32_t *) psrc_ddr + (sizeof (ne10_fft_cpx_float32_t) * (fftSize*8)));
+	psrc_ddr = (ne10_fft_cpx_float32_t *) (cfg->buffer + (sizeof (ne10_fft_cpx_float32_t) * (fftSize * NE10_FFT_BYTE_ALIGNMENT)));
+	pdst_ddr = (ne10_float32_t *) ((ne10_float32_t *) psrc_ddr + (sizeof (ne10_float32_t) * (fftSize * NE10_FFT_BYTE_ALIGNMENT)));
 #else
-	psrc_ddr = (ne10_float32_t *) (cfg->buffer + (sizeof (ne10_fft_cpx_float32_t) * (fftSize*8)));
-	pdst_ddr = (ne10_fft_cpx_float32_t *) (psrc_ddr + (sizeof (ne10_float32_t) * (fftSize*8)));
+	psrc_ddr = (ne10_float32_t *) (cfg->buffer + (sizeof (ne10_float32_t) * (fftSize * NE10_FFT_BYTE_ALIGNMENT)));
+	pdst_ddr = (ne10_fft_cpx_float32_t *) (psrc_ddr + (sizeof (ne10_fft_cpx_float32_t) * (fftSize * NE10_FFT_BYTE_ALIGNMENT)));
 #endif
 
 	// Check if we can remove this part
